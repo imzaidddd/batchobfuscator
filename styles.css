@@ -1,0 +1,141 @@
+/* Basic layout and styling */
+body {
+  font-family: 'San Francisco', Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #333;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+p {
+  color: #777;
+  font-size: 16px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Center the form and style it */
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+form:hover {
+  transform: scale(1.05);
+}
+
+/* Style for the file input */
+input[type="file"] {
+  display: none;
+}
+
+button[type="submit"], button#downloadButton {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"]:hover, button#downloadButton:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth hover animations */
+button[type="submit"]:focus, button#downloadButton:focus {
+  outline: none;
+}
+
+button[type="submit"]:active, button#downloadButton:active {
+  transform: translateY(2px);
+}
+
+/* Styling the result section */
+#result {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  margin-top: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+#result h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+/* Adding a subtle pulse animation to the submit button */
+button[type="submit"]:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  button[type="submit"], button#downloadButton {
+    padding: 12px 20px;
+  }
+
+  textarea {
+    font-size: 12px;
+    padding: 10px;
+  }
+}

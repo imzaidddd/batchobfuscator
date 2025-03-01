@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaid's Obfuscator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Batch Code Obfuscator</h1>
+  <p>Upload your batch file to obfuscate it.</p>
+
+  <!-- Form for uploading batch files -->
+  <form id="batchForm" enctype="multipart/form-data">
+    <input type="file" id="fileInput" accept=".bat,.cmd" required />
+    <button type="submit">Obfuscate</button>
+  </form>
+
+  <!-- Section to display result -->
+  <div id="result" style="display: none;">
+    <h3>Obfuscated Code</h3>
+    <textarea id="obfuscatedCode" rows="10" cols="50" readonly></textarea>
+    <br/>
+    <button id="downloadButton">Download Obfuscated File</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
